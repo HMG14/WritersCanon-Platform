@@ -11,3 +11,5 @@ venv/
 *.db-journal
 .vscode/
 .idea/
+canon_local.db
+verify_schema.py
