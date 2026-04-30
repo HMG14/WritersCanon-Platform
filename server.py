@@ -26,4 +26,9 @@ def debug_database():
     return {
         "db_exists": db_path.exists(),
         "db_path": str(db_path),
-        "db_size": db_path.stat().st_size if db_path.exists() else
+        "db_size": db_path.stat().st_size if db_path.exists() else 0
+    }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 8000)))
